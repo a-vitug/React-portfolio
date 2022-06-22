@@ -28,9 +28,7 @@ function Header() {
         <Container maxWidth='xl'>
         <Stack direction='row' alignItems='center' justifyContent='space-between' spacing='100px'>
             
-            <IconButton className='menu' >
-                <FaBars color='#D9E4DD' size={40} />
-            </IconButton>
+            <img src='./images/logo.png' width={200} />
 
             <Box sx={{ p: 2 }}>
                 <RouteLink to='/'>

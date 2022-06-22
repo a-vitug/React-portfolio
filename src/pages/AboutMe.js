@@ -7,84 +7,81 @@ import { Box, Divider, Grid,
 
 import '../App.css'
 import { Container } from '@mui/system';
+import { 
+    useParallax, 
+    Parallax, 
+    ParallaxBanner,
+    ParallaxProvider,
+} from 'react-scroll-parallax';
 
-const drawerWidth = 240;
+import bg1 from '../img/background.png';
+import tealbg from '../img/tealbg.png';
+import whitebg from '../img/whitebg.png';
+import beigebg from '../img/beigebg.png';
+
 
 function AboutMe(props) {
 
-    const { window } = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const drawerWidth = 240;
+    const { ref } = useParallax({ speed: -20 });
+    const hello = useParallax<HTMLDivElement>({
+        // scaleX: [1, 0, 'easeInQuad'],
+        easing: [1, -0.75, 0.5, 1.34],
+    });
 
-    const handleDrawerToggle = () => {
-        setMobileOpen(!mobileOpen);
-    };
-
-    const container = window !== undefined ? () => window().document.body : undefined;
-
-    const sidebar = (
-        <Box p={7}>
-            <Grid container spacing={1}>
-                <Grid item xs={1} m={10} color='#555555' fontSize={35}>
-                    <p> a </p>
-                    <p> b </p>
-                    <p> o </p>
-                    <p> u </p>
-                    <p> t </p>
-                    <br></br>
-                    <p> m </p>
-                    <p> e </p>
-                </Grid>
-
-                {/* <Divider light orientation="vertical" flexItem></Divider> */}
-
-                <Grid item xs={8}>
-
-                </Grid>
-
-            </Grid>
-        </Box>
-    );
-
+    const welcome = useParallax<HTMLDivElement>({
+        scaleX: [4, -10, 'easeInQuad'],
+    });
 
     return (
-        <Container sx={{ display: 'flex' }}>
-            <br></br>
-            <Drawer
-                sx={{
-                width: drawerWidth,
-                '& .MuiDrawer-paper': {
-                    width: drawerWidth,
-                },
-                }}
-                PaperProps={{style: {border: 'none'}}}
-                variant="permanent"
-                anchor="left"
-            >
-                <Box mt={5} p={13} item  color='#555555' fontSize={35}>
-                    <p> a </p>
-                    <p> b </p>
-                    <p> o </p>
-                    <p> u </p>
-                    <p> t </p>
-                    <br></br>
-                    <p> m </p>
-                    <p> e </p>
-                    <Divider orientation="vertical" flexItem></Divider>
+            <Box p={7}>
+                <Grid container rowSpacing={1} spacing={10} >
+                    <Grid item s={1} md={2} m={3} ml='auto' color='#555555' fontSize={35}>
+                        <p> a </p>
+                        <p> b </p>
+                        <p> o </p>
+                        <p> u </p>
+                        <p> t </p>
+                        <br></br>
+                        <p> m </p>
+                        <p> e </p>
+                        
+                    </Grid>
 
-                </Box>
-            
-                
-            </Drawer>
+                    <Divider light orientation="vertical" flexItem></Divider>
 
+                    <Grid item s={7} md={9} ml='auto'>
 
-            <Box
-                component="main"
-                sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
-            >
-                
-                hi
+                        <Box p={20}>
+                            <Parallax 
+                                translateY={['-100px', '0px']}
+                                scaleY= "4, -10, 'easeInQuad'"
+                            >
+                                <p className='welcome' ref={welcome.ref}>Welcome to my portfolio!</p>
+                            </Parallax>
+                        </Box>
+                        
+                        <Box p={5}>
+                            <ParallaxBanner layers={[{ image: {tealbg}, speed: -250 }]} className="aspect-[2/1]">
+                                <div ref={ref} class="bg">
+                                    <img src={tealbg} width='100%' height='300' />
+                                </div>
+                            </ParallaxBanner>
+                        </Box>
+                        
+                        <Box p={20}>
+                            <Parallax>
+                                <p className='name'>I am an aspiring</p>
+                                <p className='welcome'>Software Developer</p>
+                            </Parallax>
+                        </Box>
+                        
+                        
+
+                    </Grid>
+
+                </Grid>
             </Box>
-        </Container>
     )
 };
 
