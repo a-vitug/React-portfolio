@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Divider, Grid, Typography } from '@mui/material';
+import { Box, Divider, Grid, Typography, TextField, IconButton } from '@mui/material';
 
 import '../App.css'
+import { Container } from '@mui/system';
+import { FaPaperPlane } from "react-icons/fa";
 
 
 function Contact() {
@@ -23,7 +25,29 @@ function Contact() {
                 <Divider light orientation="vertical" flexItem></Divider>
 
                 <Grid item xs={8}>
-
+                    <Container>
+                        <p className='name'>If you have any questions, fill out this form and I will get back to you as soon as I can. </p>
+                        <Box textAlign='center' p={5}>
+                            <TextField fullWidth
+                                required
+                                id="outlined-required"
+                                label="Email"
+                                
+                            />
+                        </Box>
+                        <Box textAlign='center' p={5}>
+                            <TextField fullWidth
+                                required
+                                multiline
+                                id="outlined-multiline-static"
+                                label="Any Questions?"
+                                rows={4}
+                            />
+                        </Box>
+                        <IconButton className='submit' >
+                           <FaPaperPlane />
+                        </IconButton>
+                    </Container>
                 </Grid>
 
             </Grid>

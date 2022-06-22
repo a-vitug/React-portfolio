@@ -31,13 +31,13 @@ function Header() {
             <img src='./images/logo.png' width={200} />
 
             <Box sx={{ p: 2 }}>
-                <RouteLink to='/'>
+                {/* <RouteLink to='/'>
                     <Tooltip title='Home' arrow>
                         <IconButton sx={{ mr: 2 }}  className='home'>
                             <IoHome color='#D9E4DD' size={35} />
                         </IconButton>
                     </Tooltip>
-                </RouteLink>
+                </RouteLink> */}
 
                 <RouteLink to='/aboutme'>
                     <Tooltip title='About Me'>
