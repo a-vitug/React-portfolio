@@ -24,6 +24,7 @@ function App() {
                     <Route exact path='/projects' element={<Projects />} className='Projects' />
                     <Route exact path='/contact' element={<Contact />} className='Contact' />
                 </Routes>
+                <Footer />
 
             </div>
         </ParallaxProvider>

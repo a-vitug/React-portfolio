@@ -10,8 +10,8 @@ function Contact() {
 
     return (
         <Box p={7}>
-            <Grid container spacing={1}>
-                <Grid item xs={1} m={10} color='#555555' fontSize={35}>
+            <Grid container rowSpacing={1} spacing={10} >
+                <Grid item s={1} md={2} m={3} ml='auto' color='#555555' fontSize={35}>
                     <p> c </p>
                     <p> o </p>
                     <p> n </p>
@@ -24,7 +24,7 @@ function Contact() {
 
                 <Divider light orientation="vertical" flexItem></Divider>
 
-                <Grid item xs={8}>
+                <Grid item s={7} md={9} ml='auto'>
                     <Container>
                         <p className='name'>If you have any questions, fill out this form and I will get back to you as soon as I can. </p>
                         <Box textAlign='center' p={5}>
@@ -47,6 +47,18 @@ function Contact() {
                         <IconButton className='submit' >
                            <FaPaperPlane />
                         </IconButton>
+                    </Container>
+                    <Container>
+                        <Box className='contactbox' mt={20} p={5} textAlign='center'>
+                            <p className='inconsolata'>
+                                github:
+                                <a className='link' href='https://github.com/a-vitug'> a-vitug </a>
+                            </p>
+                            <p className='inconsolata'>
+                                linkedIn:
+                                <a className='link' href='https://www.linkedin.com/in/vtg-allyson/'> vtg-allyson </a>
+                            </p>
+                        </Box>
                     </Container>
                 </Grid>
 
