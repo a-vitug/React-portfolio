@@ -11,6 +11,7 @@ import { Box, Divider, Grid,
 import { Container } from '@mui/system';
 import { FaPaperPlane, FaGithubAlt } from "react-icons/fa";
 import { FiHeart, FiLinkedin } from "react-icons/fi";
+import { IoMail } from "react-icons/io5";
 
 function Footer() {
     return (
@@ -20,22 +21,26 @@ function Footer() {
         alignItems="center"
     >        
     
-        <Grid item className='inconsolata link'>
-            
-        </Grid>
+        <Grid item className='inconsolata link'></Grid>
+
         <Grid item  className='inconsolata link'>
             Made with ♡ by Allyson Vitug 
         </Grid>
 
-        <Grid item >
+        <Grid item>
             <IconButton href='https://github.com/a-vitug'>
                 <FaGithubAlt className='link'/>
             </IconButton>
             <IconButton href='https://www.linkedin.com/in/vtg-allyson/'>
                 <FiLinkedin className='link' />
-            </IconButton>          
+            </IconButton>
+            <a href='mailto:allysonvitugg@gmail.com'>
+                <IconButton>
+                    <IoMail className='link' />
+                </IconButton>    
+            </a>
+            
         </Grid>
-
 
             
         
