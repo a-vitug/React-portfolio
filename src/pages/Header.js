@@ -28,7 +28,7 @@ function Header() {
         <Container maxWidth='xl'>
         <Stack direction='row' alignItems='center' justifyContent='space-between' spacing='100px'>
             
-            <img src='./images/logo.png' width={200} />
+            <img src='./images/logo.png' width={150} />
 
             <Box sx={{ p: 2 }}>
                 <RouteLink to='/'>

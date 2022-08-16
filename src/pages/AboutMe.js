@@ -55,17 +55,17 @@ function AboutMe(props) {
 
                     <Grid item s={7} md={9} ml='auto'>
 
-                        <Box p={15} >
+                        {/* <Box p={15} >
                             <Parallax speed={-15}>
                                 <div className='welcome' > 
                                     &lt; a-vitug /&gt;
                                 </div>
                                
                             </Parallax>
-                        </Box>
+                        </Box> */}
 
-                        <Box p={20} className='ibarra' fontSize={17}>
-                            <p>A Full Stack Web Developer with a certificate from University of California in Irvine.</p>
+                        <Box p={20} className='ibarra' fontSize={20}>
+                            <p>A <span className='welcome'> Full Stack Web Developer </span> from Anaheim, CA.</p>
                             <p>Focusing on Front-End Development</p>
                         </Box>
                         

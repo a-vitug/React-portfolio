@@ -8,6 +8,7 @@ import './App.css'
 import Header from './pages/Header';
 import Footer from './pages/Footer';
 import Home from './pages/Home';
+import About from './pages/About';
 import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
@@ -21,6 +22,7 @@ function App() {
                 <Routes>
                     <Route exact path='/' element={<Home />} className='Home' />
                     <Route exact path='/aboutme' element={<AboutMe />} className='Aboutme' />
+                    <Route exact path='/about' element={<About />} />
                     <Route exact path='/projects' element={<Projects />} className='Projects' />
                     <Route exact path='/contact' element={<Contact />} className='Contact' />
                 </Routes>
