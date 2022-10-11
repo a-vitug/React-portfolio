@@ -93,7 +93,6 @@ function Home() {
         }
     }
 
-
     return (
         <>
             <Box height='85vh' p={30} >
