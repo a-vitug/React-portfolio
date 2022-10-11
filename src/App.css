@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Fredericka+the+Great&family=Ibarra+Real+Nova:wght@500&family=Inconsolata:wght@500&family=Sacramento&family=Stoke&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=DynaPuff:wght@500&family=Ibarra+Real+Nova:wght@500&family=Inconsolata:wght@500&family=Stoke&display=swap');
 
 :root {
     --beige: #fbf7f0;
-    --teal: '#D9E4DD';
+    --teal: #D9E4DD;
     --textcolor: #555555;
     --darktext: #9D9D9D;
     --lightertext: #CDC9C3;
+}
+
+.logo-text {
+    color: var(--teal);
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
 }
 
 /* background */
@@ -27,12 +33,6 @@
     font-family: 'Concert One', cursive;
 }
 
-
-.hello {
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 105px;
-}
-
 .name {
     font-size: 19px;
     text-align: center;
@@ -40,8 +40,8 @@
 
 .hello {
     color: #D4C6B4;
-    font-family: 'Stoke', serif;    
-    font-size: 65px;
+    font-family: 'DynaPuff', cursive;    
+    font-size: 100px;
     text-align: center;
 }
 
@@ -51,12 +51,66 @@
 
 .ibarra {
     font-family: 'Ibarra Real Nova', serif;
+    color: var(--darktext);
+    font-size: 37px;
 }
 
-/* projects */
+/* about me */
+.aboutmetitle {
+    border: none;
+    border-top: 5px double var(--lightertext);
+    color: var(--lightertext);
+    overflow: visible;
+    text-align: center;
+    height: 40px;
+    width: 60%;
+}
+
+.aboutmetitle:after {
+    background: #F7F4EC;
+    content: ' about me ';
+    font-size: 30px;
+    padding: 0 17px;
+    position: relative;
+    top: -23px;
+    right: 45%;
+}
+
+/* portfolio */
+.inconsolata {
+    font-family: 'Inconsolata', monospace;
+    font-size: 35px;
+    color: var(--darktext);
+}
+
+li {
+    list-style: none;
+}
+
 .polaroid {
     padding: 25px;
     box-shadow: 1px 7px 7px rgb(187, 185, 185);
+}
+
+.portfoliotitle {
+    border: none;
+    border-top: 5px double var(--lightertext);
+    color: var(--lightertext);
+    overflow: visible;
+    text-align: center;
+    height: 40px;
+    width: 60%;
+    float: right;
+}
+
+.portfoliotitle:after {
+    background: #fff;
+    content: ' portfolio ';
+    font-size: 30px;
+    padding: 0 17px;
+    position: relative;
+    top: -23px;
+    left: 45%;
 }
 
 /* contact */
@@ -65,13 +119,62 @@
     float: right;
 }
 
-.contactbox {
-    background-color: #D9E4DD;
+/* .contactbox {
+    background-color: white;
+    border: 1px solid var(--teal);
+} */
+
+.aboutmebox{ 
+    color: var(--lightertext);
+    letter-spacing: 1px;
+    line-height: 1.6;
 }
 
-.inconsolata {
-    font-family: 'Inconsolata', monospace;
+.contactbox {
+    display:flex;
+    background-color:#fff;
+    padding:20px;
+    border-radius:30px;
+    min-width:40px;
+    max-width:220px;
+    min-height:40px;
+    margin:20px;
+    position:relative;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
+
+.contactbox:before,
+.contactbox:after {
+    content:"";
+    background-color:#fff;
+    border-radius:50%;
+    display:block;
+    position:absolute;
+    z-index:-1;
+}
+
+.contactbox:before {
+    width:44px;
+    height:44px;
+    top:-12px;
+    left:28px;
+    box-shadow:-50px 30px 0 -12px #fff;
+}
+
+.contactbox:after {
+    bottom:-10px;
+    right:26px;
+    width:30px;
+    height:30px;
+    box-shadow:40px -34px 0 0 #fff,
+                -28px -6px 0 -2px #fff,
+                -24px 17px 0 -6px #fff,
+                -5px 25px 0 -10px #fff;
+}
+
+
 
 .link {
     color: var(--darktext);
@@ -82,4 +185,9 @@
 *:after,
 *:before {
   box-sizing: border-box;
+}
+
+.footerbox {
+    background-color: var(--teal);
+    font-family: 'Inconsolata', monospace;
 }

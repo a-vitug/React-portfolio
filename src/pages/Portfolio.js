@@ -17,7 +17,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 
 
 
-function Projects() {
+function Portfolio() {
 
     const theme = useTheme();
 
@@ -58,13 +58,14 @@ function Projects() {
             <Grid container spacing={10} rowSpacing={1}>
                 <Grid item s={1} md={2} m={3} ml='auto' color='#555555' fontSize={35}>
                     <p> p </p>
-                    <p> r </p>
                     <p> o </p>
-                    <p> j </p>
-                    <p> e </p>
-                    <p> c </p>
+                    <p> r </p>
                     <p> t </p>
-                    <p> s </p>
+                    <p> f </p>
+                    <p> o </p>
+                    <p> l </p>
+                    <p> i </p>
+                    <p> o </p>
                 </Grid>
 
                 <Divider light orientation="vertical" flexItem></Divider>
@@ -108,4 +109,4 @@ function Projects() {
     )
 };
 
-export default Projects;
+export default Portfolio;

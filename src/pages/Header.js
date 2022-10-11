@@ -28,7 +28,10 @@ function Header() {
         <Container maxWidth='xl'>
         <Stack direction='row' alignItems='center' justifyContent='space-between' spacing='100px'>
             
-            <img src='./images/logo.png' width={150} />
+            {/* <img src='./images/logo.png' width={150} /> */}
+            <Box className='logo-text'>
+                <p> &lt; a-vitug /&gt; </p>
+            </Box>
 
             <Box sx={{ p: 2 }}>
                 <RouteLink to='/'>
@@ -39,17 +42,17 @@ function Header() {
                     </Tooltip>
                 </RouteLink>
 
-                <RouteLink to='/aboutme'>
+                {/* <RouteLink to='/aboutme'>
                     <Tooltip title='About Me'>
                         <IconButton sx={{ mr: 2 }}  className='aboutme'>
                             <BsPersonBoundingBox color='#D9E4DD' size={33} />
                         </IconButton>
                     </Tooltip>
-                </RouteLink>
+                </RouteLink> */}
 
-                <RouteLink to='/projects'>
-                    <Tooltip title='Projects'>
-                        <IconButton sx={{ mr: 2 }} className='projects' >
+                <RouteLink to='/portfolio'>
+                    <Tooltip title='Portfolio'>
+                        <IconButton sx={{ mr: 2 }} className='portfolio' >
                             <MdAssignment color='#D9E4DD' size={38} />
                         </IconButton>
                     </Tooltip>

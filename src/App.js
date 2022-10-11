@@ -11,7 +11,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
-import Projects from './pages/Projects';
+import Portfolio from './pages/Portfolio';
 
 function App() {
 
@@ -23,11 +23,10 @@ function App() {
                     <Route exact path='/' element={<Home />} className='Home' />
                     <Route exact path='/aboutme' element={<AboutMe />} className='Aboutme' />
                     <Route exact path='/about' element={<About />} />
-                    <Route exact path='/projects' element={<Projects />} className='Projects' />
+                    <Route exact path='/portfolio' element={<Portfolio />} className='Portfolio' />
                     <Route exact path='/contact' element={<Contact />} className='Contact' />
                 </Routes>
                 <Footer />
-
             </div>
         </ParallaxProvider>
     );

@@ -3,6 +3,7 @@ import { Box, Divider, Grid,
     Drawer,
     CssBaseline,
     AppBar,
+    Grow,
 } from '@mui/material';
 
 import '../App.css'
@@ -55,28 +56,30 @@ function AboutMe(props) {
 
                     <Grid item s={7} md={9} ml='auto'>
 
-                        {/* <Box p={15} >
-                            <Parallax speed={-15}>
-                                <div className='welcome' > 
-                                    &lt; a-vitug /&gt;
-                                </div>
-                               
-                            </Parallax>
-                        </Box> */}
+                        <Box p={10} textAlign='center'>
+                            <Grid container spacing={1} justifyContent='center' alignItems='center'>
 
-                        <Box p={20} className='ibarra' fontSize={20}>
-                            <p>A <span className='welcome'> Full Stack Web Developer </span> from Anaheim, CA.</p>
-                            <p>Focusing on Front-End Development</p>
+                                <Grid item s={10} md={8} lg={7}>
+                                    
+                                    <Box className='bio' fontSize={20}>
+                                        <p>My name is Allyson Vitug. I am a <span> &lt; Full Stack Developer /&gt; </span> from Anaheim, CA. </p>
+                                        <p>A first generational woman of color breaking into tech with passion for creating webpages.... </p>
+                                    </Box>
+
+                                </Grid>
+
+                                <Grid item s={2} md={4} lg={5}>
+                                    
+                                </Grid>
+
+                            </Grid>
+                                <Parallax speed={-5}>
+                                    <img src='./images/me.png' height='60%' width='60%' />
+                                </Parallax>
+
                         </Box>
-                        
-                        {/* <Box p={5}>
-                            <ParallaxBanner layers={[{ image: {tealbg}, speed: -250 }]} className="aspect-[2/1]">
-                                <div ref={ref} class="bg">
-                                    <img src={bg} width='100%' height='300' />
-                                </div>
-                            </ParallaxBanner>
-                        </Box> */}
 
+                        
                         <Box p={15}>
                             <Box className='welcome' p={5}>
                                 Badges
