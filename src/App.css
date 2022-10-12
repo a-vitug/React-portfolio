@@ -12,8 +12,12 @@
     color: var(--teal);
     font-family: 'Inconsolata', monospace;
     font-size: 25px;
+    text-decoration: none;
 }
 
+.logotitle {
+    text-decoration: none;
+}
 /* background */
 .paperbg {
     background: url(./img/paperbg.png);
@@ -83,9 +87,7 @@
     color: var(--darktext);
 }
 
-li {
-    list-style: none;
-}
+
 
 .polaroid {
     padding: 25px;

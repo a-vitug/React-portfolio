@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link as RouteLink } from 'react-router-dom';
-import { Box, Button, Divider,
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Divider,
     Grid,
     Card,
     CardActions,
@@ -9,8 +9,13 @@ import { Box, Button, Divider,
     CardMedia,
     IconButton,
     Popover,
+    Tab,
+    Tabs,
     Typography,
+    Icon,
 } from '@mui/material';
+
+import { TabContext, TabList, TabPanel } from '@mui/lab';
 
 import { 
     useParallax, 
@@ -24,6 +29,7 @@ import { Container } from '@mui/system';
 import { FaPaperPlane, FaGithub, FaGithubAlt, FaInfoCircle, } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
 import { IoHome, IoMail } from "react-icons/io5";
+import { TbNumber1, TbNumber2, TbNumber3, TbNumber4, TbNumber5, } from "react-icons/tb";
 
 import bg from '../img/bg.png';
 import html from '../img/badges/html-css.png';
@@ -49,14 +55,6 @@ function Home() {
   
     const open = Boolean(anchorEl);
     
-    // const [open, toggle] = useState(false)
-    // const [{ freq, factor, scale, opacity }] = useSpring(() => ({
-    //     loop: { reverse: true },
-    //     from: { factor: 10, opacity: 0, scale: 0.9, freq: '0.0175, 0.0' },
-    //     to: { factor: 150, opacity: 1, scale: 1, freq: '0.0, 0.0' },
-    //     config: { duration: 3000 },
-    // }));
-
     const [isLoop, setIsLoop] = useState(0);
     const [isRepeat, setIsRepeat] = useState(false);
     const [texts, setTexts] = useState('');
@@ -93,7 +91,13 @@ function Home() {
         }
     }
 
-    
+    const [value, setValue] = React.useState('1');
+
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    };
+
+
     return (
         <>
             <Box height='85vh' p={30} >
@@ -106,17 +110,16 @@ function Home() {
 
             <Box p={10} height='70vh' bgcolor='#F7F4EC' >
 
-                <Box className='aboutmetitle'></Box>
-                
+                <Box className='aboutmetitle' href='#aboutme'></Box>
                 
                 <Grid container spacing={1} textAlign='center' justifyContent='center' alignItems='center'>
                     
                         <Grid item s={8} md={7} lg={7}>
                             <Box fontSize={21}>
                                 <Parallax speed={10}>
-                                    <Box p={6} className='aboutmebox'>
+                                    <Box p={6} className='aboutmebox' id='aboutme'>
                                         <p>My name is Allyson Vitug. I am a <span> &lt; Full Stack Developer /&gt; </span> from Anaheim, CA. <br></br>
-                                         A first generational woman of color breaking into tech with passion for creating webpages.... </p>
+                                         A first generational woman of color breaking into tech with passion for creating and designing webpages.... </p>
                                     </Box>
                                 </Parallax>
 
@@ -156,15 +159,127 @@ function Home() {
                 <RouteLink to='/portfolio'>
                     <Box className='portfoliotitle'></Box>
                 </RouteLink>
-                
-                <Box className='inconsolata'>
-                    <ul>
-                        <li><a> noteful </a></li>
-                        <li><a> password gen </a></li>
-                        <li><a> meal planner </a></li>
-                        <li><a> oh my, books! </a></li>
-                        <li><a> team profile gen </a></li>
-                    </ul>
+
+                <Box className='inconsolata' mt='200px' sx={{  bgcolor: 'background.paper', display: 'flex', flexGrow: 2, justifyContent: 'space-evenly'}}>
+                    <TabContext centered value={value} styles={{ fontFamily: "'Inconsolata', monospace" }}>
+                        <Box justifyContent='center' textAlign='center'>
+                            <Tabs centered 
+                                orientation="vertical"
+                                variant="scrollable"
+                                value={value}
+                                onChange={handleChange}
+                                aria-label="my portfolio" 
+                                sx={{ borderRight: 1, borderColor: 'divider' }}
+                            >
+                                    <Tab icon={<TbNumber1/>} value="1" />
+                                    <Tab label={<TbNumber2/>} value="2" />
+                                    <Tab label={<TbNumber3/>} value="3" />
+                                    <Tab label={<TbNumber4/>} value="4" />
+                                    <Tab label={<TbNumber5/>} value="5" />
+                            </Tabs>
+                        </Box>
+
+                        <TabPanel mr='50px' value="1" >
+                            <Card  sx={{ maxWidth: 645, }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        image="/images/noteful.png"
+                                        alt="noteful"
+                                    />
+                                    <CardContent>
+                                        <IconButton href='https://github.com/a-vitug/react-app'>
+                                            <FaGithub />
+                                        </IconButton>
+                                        <IconButton href='https://noteful5.herokuapp.com/'>
+                                            <FaInfoCircle />
+                                        </IconButton>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </TabPanel>
+                        
+                        <TabPanel value="2">
+                            <Card sx={{ maxWidth: 645 }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        image="/images/passwordgen.png"
+                                        alt="password gen"
+                                    />
+                                    <CardContent>
+                                        <IconButton href='https://github.com/a-vitug/Password-Gen'>
+                                            <FaGithub />
+                                        </IconButton>
+                                        <IconButton>
+                                            <FaInfoCircle />
+                                        </IconButton>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </TabPanel>
+
+                        <TabPanel value="3">
+                            <Card sx={{ maxWidth: 645 }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        image="/images/ohmybooks.png"
+                                        alt="oh my, books!"
+                                    />
+                                    <CardContent>
+                                        <IconButton href='https://github.com/mrjeoffrey/ohmybooks'>
+                                            <FaGithub />
+                                        </IconButton>
+                                        <IconButton href='https://ohmybooks.herokuapp.com/'>
+                                            <FaInfoCircle />
+                                        </IconButton>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </TabPanel>
+
+                        <TabPanel value="4">
+                            <Card sx={{ maxWidth: 645 }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        image="/images/mealplanner.png"
+                                        alt="meal planner"
+                                    />
+                                    <CardContent>
+                                        <IconButton href='https://github.com/Famesmyname/Ingredient-to-Meal-Planner'>
+                                            <FaGithub />
+                                        </IconButton>
+                                        <IconButton href='https://famesmyname.github.io/Ingredient-to-Meal-Planner/'>
+                                            <FaInfoCircle />
+                                        </IconButton>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </TabPanel>
+
+                        <TabPanel value="5">
+                            <Card sx={{ maxWidth: 645 }}>
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        image="/images/teamprofilegen.png"
+                                        alt="team profile gen"
+                                    />
+                                    <CardContent>
+                                        <IconButton href='https://github.com/a-vitug/hw10_teamprofilegen'>
+                                            <FaGithub />
+                                        </IconButton>
+                                        <IconButton>
+                                            <FaInfoCircle />
+                                        </IconButton>
+                                    </CardContent>
+                                </CardActionArea>
+                            </Card>
+                        </TabPanel>
+
+                    </TabContext>
                 </Box>
             
             </Box>

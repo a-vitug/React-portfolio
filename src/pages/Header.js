@@ -29,8 +29,8 @@ function Header() {
         <Stack direction='row' alignItems='center' justifyContent='space-between' spacing='100px'>
             
             {/* <img src='./images/logo.png' width={150} /> */}
-            <Box className='logo-text'>
-                <p> &lt; a-vitug /&gt; </p>
+            <Box>
+                <a className='logo-text' href='https://docs.google.com/document/d/1mNsgcla0Cmxl1ABEm0kjDgDtyCe5XtaQv4pLdJw5Gtk/edit?usp=sharing'> &lt; a-vitug /&gt; </a>
             </Box>
 
             <Box sx={{ p: 2 }}>
@@ -41,14 +41,6 @@ function Header() {
                         </IconButton>
                     </Tooltip>
                 </RouteLink>
-
-                {/* <RouteLink to='/aboutme'>
-                    <Tooltip title='About Me'>
-                        <IconButton sx={{ mr: 2 }}  className='aboutme'>
-                            <BsPersonBoundingBox color='#D9E4DD' size={33} />
-                        </IconButton>
-                    </Tooltip>
-                </RouteLink> */}
 
                 <RouteLink to='/portfolio'>
                     <Tooltip title='Portfolio'>
