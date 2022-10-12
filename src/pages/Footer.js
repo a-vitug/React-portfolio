@@ -1,16 +1,6 @@
-import { Box, Divider, Grid, 
-    Drawer,
-    CssBaseline,
-    AppBar,
-    TextField,
-    Icon,
-    IconButton
-} from '@mui/material';
-
-
-import { Container } from '@mui/system';
-import { FaPaperPlane, FaGithubAlt } from "react-icons/fa";
-import { FiHeart, FiLinkedin } from "react-icons/fi";
+import { Box, Grid, IconButton } from '@mui/material';
+import { FaGithubAlt } from "react-icons/fa";
+import { FiLinkedin } from "react-icons/fi";
 import { IoMail } from "react-icons/io5";
 
 function Footer() {

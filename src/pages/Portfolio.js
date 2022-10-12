@@ -1,25 +1,9 @@
-import { useTheme } from '@mui/material/styles';
-import { Box, Divider, Grid, Typography,
-    Card,
-    CardContent,
-    CardMedia,
-    IconButton,
-    ImageList,
-    ImageListItem,
-    ImageListItemBar,
-} from '@mui/material';
-
+import { Box, Divider, Grid, IconButton, ImageList, ImageListItem, ImageListItemBar, } from '@mui/material';
 import '../App.css'
-import { Container } from '@mui/system';
 import { FaGithub, FaInfoCircle } from "react-icons/fa";
-
 import React, { useState, useEffect, useMemo } from 'react'
 
-
-
 function Portfolio() {
-
-    const theme = useTheme();
 
     const itemData = [
         {
@@ -101,10 +85,7 @@ function Portfolio() {
                               ))}
                         </ImageList>
                 </Grid>
-
             </Grid>
-
-            
         </Box>
     )
 };

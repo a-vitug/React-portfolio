@@ -1,60 +1,16 @@
+import '../App.css';
 import React, { useEffect, useState } from 'react';
 import { Link as RouteLink } from 'react-router-dom';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Divider,
-    Grid,
-    Card,
-    CardActions,
-    CardActionArea,
-    CardContent,
-    CardMedia,
-    IconButton,
-    Popover,
-    Tab,
-    Tabs,
-    Typography,
-    Icon,
-} from '@mui/material';
-
-import { TabContext, TabList, TabPanel } from '@mui/lab';
-
-import { 
-    useParallax, 
-    Parallax, 
-    ParallaxBanner,
-    ParallaxProvider,
-} from 'react-scroll-parallax';
-
-import '../App.css'
-import { Container } from '@mui/system';
-import { FaPaperPlane, FaGithub, FaGithubAlt, FaInfoCircle, } from "react-icons/fa";
+import { TabContext, TabPanel } from '@mui/lab';
+import { Box, Grid, Card, CardActionArea, CardContent, CardMedia, IconButton, Tab, Tabs, } from '@mui/material';
+import { Parallax } from 'react-scroll-parallax';
+import { FaGithub, FaGithubAlt, FaInfoCircle, } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
-import { IoHome, IoMail } from "react-icons/io5";
+import { IoMail } from "react-icons/io5";
 import { TbNumber1, TbNumber2, TbNumber3, TbNumber4, TbNumber5, } from "react-icons/tb";
-
-import bg from '../img/bg.png';
-import html from '../img/badges/html-css.png';
-import js from '../img/badges/javascript-and-jquery.png';
-import node from '../img/badges/node-js-and-express.png';
-import reactjs from '../img/badges/react-js.png';
-import mysql from '../img/badges/sql-and-nosql-databases.png';
-
-import { useSpring,  animated } from '@react-spring/web';
-
 
 function Home() {
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-
-    const handlePopoverOpen = (event) => {
-      setAnchorEl(event.currentTarget);
-    };
-  
-    const handlePopoverClose = () => {
-      setAnchorEl(null);
-    };
-  
-    const open = Boolean(anchorEl);
-    
     const [isLoop, setIsLoop] = useState(0);
     const [isRepeat, setIsRepeat] = useState(false);
     const [texts, setTexts] = useState('');
@@ -97,7 +53,6 @@ function Home() {
       setValue(newValue);
     };
 
-
     return (
         <>
             <Box height='85vh' p={30} >
@@ -125,10 +80,6 @@ function Home() {
 
                                 <Parallax speed={7}>
                                     <Box p={2} className='contactbox' >
-                                        {/* <p className='inconsolata link'>
-                                            Want to work with me? Let's connect!
-                                        </p> */}
-
                                         <IconButton href='https://github.com/a-vitug'>
                                             <FaGithubAlt className='link' />
                                         </IconButton>
@@ -283,32 +234,6 @@ function Home() {
                 </Box>
             
             </Box>
-
-                
-                {/* <Box p={5}>
-                    <ParallaxBanner layers={[{ image: {tealbg}, speed: -250 }]} className="aspect-[2/1]">
-                        <div ref={ref} class="bg">
-                            <img src={bg} width='100%' height='300' />
-                        </div>
-                    </ParallaxBanner>
-                </Box> */}
-
-                {/* <Box p={15}>
-                    <Box className='welcome' p={5}>
-                    &lt; badges /&gt;
-                    </Box> 
-
-                    <Grid container spacing={1} justifyContent='center' alignItems='baseline'>
-                        <Grid item s={2} class="bg">
-                            <img src={html} width='17%' />
-                            <img src={js} width='17%' />
-                            <img src={node} width='17%' />
-                            <img src={reactjs} width='17%' />
-                            <img src={mysql} width='17%' />
-                        </Grid>
-                    </Grid>
-                </Box> */}
-                    
         </>
     )
 }
