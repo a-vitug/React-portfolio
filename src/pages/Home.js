@@ -2,7 +2,9 @@ import '../App.css';
 import React, { useEffect, useState } from 'react';
 import { Link as RouteLink } from 'react-router-dom';
 import { TabContext, TabPanel } from '@mui/lab';
-import { Box, Grid, Card, CardActionArea, CardContent, CardMedia, IconButton, Tab, Tabs, } from '@mui/material';
+import { Box, Grid, Card, CardActionArea, CardContent, CardMedia, IconButton, Tab, Tabs, styled } from '@mui/material';
+import TabsUnstyled from '@mui/base/TabsUnstyled';
+import TabUnstyled from '@mui/base/TabUnstyled';
 import { Parallax } from 'react-scroll-parallax';
 import { FaGithub, FaGithubAlt, FaInfoCircle, } from "react-icons/fa";
 import { FiLinkedin } from "react-icons/fi";
@@ -53,9 +55,29 @@ function Home() {
       setValue(newValue);
     };
 
+    const Tab = styled(TabUnstyled)`
+        font-family: 'Ibarra Real Nova', serif;
+        border: none;
+        color: #CDC9C3;
+        background-color: transparent;
+        margin: 10px 6px;
+        padding: 15px 17px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 1.5rem;
+
+        &:hover {
+            border: 3px solid #F7F4EC;
+            border-radius: 20px;
+          }
+    `;
+
     return (
         <>
-            <Box height='85vh' p={30} >
+            <Box className='greet' height='85vh' p={30} >
                 <Parallax speed={-15}>
                     <div className='hello'>
                         <span>  {texts} </span>
@@ -67,41 +89,40 @@ function Home() {
 
                 <Box className='aboutmetitle' href='#aboutme'></Box>
                 
-                <Grid container spacing={1} textAlign='center' justifyContent='center' alignItems='center'>
+                <Grid container spacing={1}  rows={{ md: 10, lg: 12 }} textAlign='center' justifyContent='center' alignItems='center'>
                     
-                        <Grid item s={8} md={7} lg={7}>
-                            <Box fontSize={21}>
-                                <Parallax speed={10}>
-                                    <Box p={6} className='aboutmebox' id='aboutme'>
-                                        <p>My name is Allyson Vitug. I am a <span> &lt; Full Stack Developer /&gt; </span> from Anaheim, CA. <br></br>
-                                         A first generational woman of color breaking into tech with passion for creating and designing webpages.... </p>
-                                    </Box>
-                                </Parallax>
 
-                                <Parallax speed={7}>
-                                    <Box p={2} className='contactbox' >
-                                        <IconButton href='https://github.com/a-vitug'>
-                                            <FaGithubAlt className='link' />
-                                        </IconButton>
-                                        <IconButton href='https://www.linkedin.com/in/vtg-allyson/'>
-                                            <FiLinkedin className='link' />
-                                        </IconButton>
-                                        <a href='mailto:allysonvitugg@gmail.com'>
-                                            <IconButton>
-                                                <IoMail className='link' />
-                                            </IconButton>    
-                                        </a>
-                                    </Box>
-                                </Parallax>
-
-                            </Box>
-                        </Grid>
-                    
-                        <Grid item s={1} md={5} lg={5}>
-                            <Parallax speed={-5}>
-                                <img src='./images/me.jpg' height='60%' width='60%' />
+                    <Grid item xs={9} s={7} md={7} lg={7}>
+                        <Box fontSize={21}>
+                            <Parallax speed={10}>
+                                <Box p={6} className='aboutmebox' id='aboutme'>
+                                    <p>My name is Allyson Vitug. I am a <span> &lt; Full Stack Developer /&gt; </span> from Anaheim, CA. <br></br>
+                                        A first generational woman of color breaking into tech with passion for creating and designing webpages.... </p>
+                                </Box>
                             </Parallax>
-                        </Grid>
+
+                            <Parallax speed={7}>
+                                <Box p={2} className='contactbox' >
+                                    <IconButton className='icon' href='https://github.com/a-vitug'>
+                                        <FaGithubAlt className='link' />
+                                    </IconButton>
+                                    <IconButton className='icon' href='https://www.linkedin.com/in/vtg-allyson/'>
+                                        <FiLinkedin className='link' />
+                                    </IconButton>
+                                    <a href='mailto:allysonvitugg@gmail.com'>
+                                        <IconButton className='icon'>
+                                            <IoMail className='link' />
+                                        </IconButton>    
+                                    </a>
+                                </Box>
+                            </Parallax>
+
+                        </Box>
+                    </Grid>
+                    <Grid item xs={3} md={5} lg={5}>
+                        <img src='./images/me.jpg' height='60%' width='60%' />
+                    </Grid>
+                        
                     
                 </Grid>
             </Box>
@@ -112,22 +133,21 @@ function Home() {
                 </RouteLink>
 
                 <Box className='inconsolata' mt='200px' sx={{  bgcolor: 'background.paper', display: 'flex', flexGrow: 2, justifyContent: 'space-evenly'}}>
-                    <TabContext centered value={value} styles={{ fontFamily: "'Inconsolata', monospace" }}>
+                    <TabContext centered value={value} >
                         <Box justifyContent='center' textAlign='center'>
-                            <Tabs centered 
-                                orientation="vertical"
-                                variant="scrollable"
+                            <TabsUnstyled centered 
+                                // orientation="vertical"
                                 value={value}
                                 onChange={handleChange}
-                                aria-label="my portfolio" 
-                                sx={{ borderRight: 1, borderColor: 'divider' }}
+                                // sx={{ borderRight: 1, borderColor: 'divider' }}
+                                // styles={{ fontFamily: "'Inconsolata', monospace" }}
                             >
-                                    <Tab icon={<TbNumber1/>} value="1" />
-                                    <Tab label={<TbNumber2/>} value="2" />
-                                    <Tab label={<TbNumber3/>} value="3" />
-                                    <Tab label={<TbNumber4/>} value="4" />
-                                    <Tab label={<TbNumber5/>} value="5" />
-                            </Tabs>
+                                    <Tab value="1"> noteful </Tab>
+                                    <Tab value="2"> password gen </Tab>
+                                    <Tab value="3"> oh my, books! </Tab>
+                                    <Tab value="4"> meal planner </Tab>
+                                    <Tab value="5"> team profile gen </Tab>
+                            </TabsUnstyled>
                         </Box>
 
                         <TabPanel mr='50px' value="1" >

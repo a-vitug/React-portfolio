@@ -173,11 +173,23 @@
                 -5px 25px 0 -10px #fff;
 }
 
+.contactbox .icon:hover {
+    animation: bounce 0.4s cubic-bezier(0.59, -0.67, 0.24, 0.79) infinite;
+}
 
-
-.link {
+.link{
     color: var(--darktext);
     opacity: 0.8;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
 }
 
 *,
@@ -189,4 +201,19 @@
 .footerbox {
     background-color: var(--teal);
     font-family: 'Inconsolata', monospace;
+}
+
+@media screen and (max-width: 920px) {
+    .greet {
+        height: 40vh;
+    } 
+    .hello {
+        font-size: 50px;
+    }
+
+    img {
+        position: relative;
+        display: flex;
+        align-self: start;
+    }
 }
