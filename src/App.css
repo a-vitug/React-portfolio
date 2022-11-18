@@ -82,6 +82,7 @@
     font-family: 'Inconsolata', monospace;
     font-size: 35px;
     color: var(--darktext);
+    opacity: 0.8;
 }
 
 
@@ -111,8 +112,6 @@
     top: -23px;
     left: 45%;
 }
-
-/* contact */
 
 .submit {
     float: right;
@@ -173,7 +172,7 @@
                 -5px 25px 0 -10px #fff;
 }
 
-.contactbox .icon:hover {
+.icon:hover {
     animation: bounce 0.4s cubic-bezier(0.59, -0.67, 0.24, 0.79) infinite;
 }
 
@@ -201,6 +200,55 @@
 .footerbox {
     background-color: var(--teal);
     font-family: 'Inconsolata', monospace;
+}
+
+/* contact page */
+.contactme {
+    background-color:#F7F4EC;
+    padding:20px;
+    border-radius:30px;
+    min-width:90px;
+    max-width:920px;
+    margin:20px;
+    position:relative;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.contactme:before,
+.contactme:after {
+    content:"";
+    background-color:#F7F4EC;
+    border-radius:50%;
+    position:absolute;
+    z-index:-1;
+}
+
+.contactme:before {
+    width:44px;
+    height:44px;
+    top:-12px;
+    left:28px;
+    box-shadow:-50px 30px 0 -12px #F7F4EC;
+}
+
+.contactme:after {
+    bottom:-10px;
+    right:26px;
+    width:30px;
+    height:30px;
+    box-shadow:40px -34px 0 0 #F7F4EC,
+                -28px -6px 0 -2px #F7F4EC,
+                -24px 17px 0 -6px #F7F4EC,
+                -5px 25px 0 -10px #F7F4EC;
+}
+
+.interest {
+    color: var(--darktext);
+    opacity: 0.8;
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 920px) {

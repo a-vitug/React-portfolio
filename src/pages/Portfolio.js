@@ -40,7 +40,7 @@ function Portfolio() {
     return (
         <Box p={7}>
             <Grid container spacing={10} rowSpacing={1}>
-                <Grid item s={1} md={2} m={3} ml='auto' color='#555555' fontSize={35}>
+                <Grid item s={1} md={2} m={3} ml='auto' className='link' fontSize={35}>
                     <p> p </p>
                     <p> o </p>
                     <p> r </p>
