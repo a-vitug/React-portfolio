@@ -7,14 +7,12 @@ function Footer() {
     return (
         <Box>
             <Grid container className='footerbox' mt={20} p={2} rowSpacing={1} spacing={10} 
+                display='flex'
                 direction='row'
                 justifyContent="space-between" 
-                alignItems="center"
             >        
             
-                <Grid item className='link'></Grid>
-
-                <Grid item  className='link'>
+                <Grid item className='link'  alignSelf='center'>
                     Made with ♡ by Allyson Vitug 
                 </Grid>
 

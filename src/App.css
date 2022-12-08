@@ -247,8 +247,8 @@
 .interest {
     color: var(--darktext);
     opacity: 0.8;
-    font-family: 'Inconsolata', monospace;
     font-size: 25px;
+    letter-spacing: 1px;
 }
 
 @media screen and (max-width: 920px) {
