@@ -16,7 +16,7 @@ function Header() {
                 </Box>
 
                 <Box sx={{ p: 2 }}>
-                    <RouteLink to='/'>
+                    <RouteLink to='/React-portfolio'>
                         <Tooltip title='Home' arrow>
                             <IconButton sx={{ mr: 2 }}  className='home'>
                                 <IoHome color='#D9E4DD' size={35} />

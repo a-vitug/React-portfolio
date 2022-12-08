@@ -6,6 +6,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { IoMail } from "react-icons/io5";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Me from '../img/me.JPG';
 
 function About () {
 
@@ -21,7 +22,7 @@ function About () {
 
             <Grid container spacing={1} direction={{ xs: 'column', sm: 'column', md: 'row', lg: 'row', xl: 'row'}} textAlign='center' justifyContent='center' alignItems='center'>
                 <Grid item xs={3} md={5} lg={5} display='flex' justifyContent='center'>
-                    <img src='./images/me.jpg'  float='right' height='60%' width='60%'
+                    <img src={Me}  float='right' height='60%' width='60%'
                         data-aos="fade-up" 
                         data-aos-duration="8000"
                         data-aos-offset="350"

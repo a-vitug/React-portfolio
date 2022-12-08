@@ -14,7 +14,7 @@ function App() {
             <div className='App'>
                 <Header />
                 <Routes>
-                    <Route exact path='/' element={<Home />} className='Home' />
+                    <Route exact path='/React-portfolio/' element={<Home />} className='Home' />
                     <Route path='/portfolio' element={<Portfolio />} className='Portfolio' />
                     <Route path='/contact' element={<Contact />} className='Contact' />
                 </Routes>

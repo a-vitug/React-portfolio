@@ -3,34 +3,40 @@ import '../App.css'
 import { FaGithub, FaInfoCircle } from "react-icons/fa";
 import React, { useState, useEffect, useMemo } from 'react'
 
+import Noteful from '../img/noteful.png';
+import Ohmybooks from '../img/ohmybooks.png';
+import Mealplanner from '../img/mealplanner.png';
+import Passwordgen from '../img/passwordgen.png';
+import Teamprofilegen from '../img/teamprofilegen.png';
+
 function Portfolio() {
 
     const itemData = [
         {
-            img: './img/noteful.png',
+            img: Noteful,
             title: 'Noteful',
             github: 'https://github.com/a-vitug/react-app',
             site: 'https://noteful5.herokuapp.com/',
         },
         {
-            img: './images/passwordgen.png',
+            img: Passwordgen,
             title: 'Password Generator',
             github: 'https://github.com/a-vitug/Password-Gen',
         },
         {
-            img: './images/mealplanner.png',
+            img: Mealplanner,
             title: 'Meal Planner',
             github: 'https://github.com/Famesmyname/Ingredient-to-Meal-Planner',
             site: 'https://famesmyname.github.io/Ingredient-to-Meal-Planner/',
         },         
         {
-            img: './images/ohmybooks.png',
+            img: Ohmybooks,
             title: 'Oh my, Books!',
             github: 'https://github.com/mrjeoffrey/ohmybooks',
             site: 'https://ohmybooks.herokuapp.com/',
         },
         {
-            img: './images/teamprofilegen.png',
+            img: Teamprofilegen,
             title: 'Team Profile Generator',
             github: 'https://github.com/a-vitug/hw10_teamprofilegen',
         },

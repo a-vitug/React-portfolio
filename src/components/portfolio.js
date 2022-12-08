@@ -9,6 +9,12 @@ import { FaGithub, FaInfoCircle, } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import Noteful from '../img/noteful.png';
+import Ohmybooks from '../img/ohmybooks.png';
+import Mealplanner from '../img/mealplanner.png';
+import Passwordgen from '../img/passwordgen.png';
+import Teamprofilegen from '../img/teamprofilegen.png';
+
 function Portfolio() {
     const [value, setValue] = React.useState('1');
 
@@ -70,7 +76,7 @@ function Portfolio() {
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
-                                        image="/images/noteful.png"
+                                        image={Noteful}
                                         alt="noteful"
                                     />
                                     <CardContent>
@@ -90,7 +96,7 @@ function Portfolio() {
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
-                                        image="/images/passwordgen.png"
+                                        image={Passwordgen}
                                         alt="password gen"
                                     />
                                     <CardContent>
@@ -110,7 +116,7 @@ function Portfolio() {
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
-                                        image="/images/ohmybooks.png"
+                                        image={Ohmybooks}
                                         alt="oh my, books!"
                                     />
                                     <CardContent>
@@ -130,7 +136,7 @@ function Portfolio() {
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
-                                        image="/images/mealplanner.png"
+                                        image={Mealplanner}
                                         alt="meal planner"
                                     />
                                     <CardContent>
@@ -150,7 +156,7 @@ function Portfolio() {
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
-                                        image="/images/teamprofilegen.png"
+                                        image={Teamprofilegen}
                                         alt="team profile gen"
                                     />
                                     <CardContent>

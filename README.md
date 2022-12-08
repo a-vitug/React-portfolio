@@ -1,10 +1,9 @@
 # **Portfolio**
 
 ## *Demo* 
-❧ Below is an image of the site. ☙
+❧ Here is a demo of the site. ☙
 
-![image]()
-![image]()
+![demo](./src/img/react-portfolio.gif)
 
 ---
 
