@@ -7,7 +7,7 @@ function Portfolio() {
 
     const itemData = [
         {
-            img: './images/noteful.png',
+            img: './img/noteful.png',
             title: 'Noteful',
             github: 'https://github.com/a-vitug/react-app',
             site: 'https://noteful5.herokuapp.com/',
