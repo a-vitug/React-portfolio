@@ -62,9 +62,9 @@ function Portfolio() {
 
                 <Grid item s={8} md={9} ml='auto' >
 
-                        <ImageList variant="masonry" cols={2} gap={40}>
+                        <ImageList variant="masonry" cols={2} gap={40} >
                             {itemData.map((item) => (
-                                <ImageListItem key={item.img} className='polaroid'>
+                                <ImageListItem key={item.img} sx={{ maxWidth: 645, minWidth: 250, }} className='polaroid'>
                                   <img
                                     src={`${item.img}?w=248&fit=crop&auto=format`}
                                     srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
