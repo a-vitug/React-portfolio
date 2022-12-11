@@ -41,9 +41,11 @@ function Portfolio() {
             border-radius: 20px;
         }
 
-        @media screen and (max-width: 390px) {
+        @media screen and (max-width: 480px) {
             font-size: medium;
             padding: 5px 10px;
+            margin: 5px 1px;
+            flex-direction: row;
         }
     `;
 
@@ -77,7 +79,7 @@ function Portfolio() {
                         </Box>
 
                         <TabPanel mr='50px' value="1" >
-                            <Card  sx={{ maxWidth: 645, }}>
+                            <Card  sx={{ maxWidth: 645, minWidth: 250, }}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
@@ -97,7 +99,7 @@ function Portfolio() {
                         </TabPanel>
                         
                         <TabPanel value="2">
-                            <Card sx={{ maxWidth: 645 }}>
+                            <Card sx={{ maxWidth: 645, minWidth: 250, }}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
@@ -117,7 +119,7 @@ function Portfolio() {
                         </TabPanel>
 
                         <TabPanel value="3">
-                            <Card sx={{ maxWidth: 645 }}>
+                            <Card sx={{ maxWidth: 645, minWidth: 250, }}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
@@ -137,7 +139,7 @@ function Portfolio() {
                         </TabPanel>
 
                         <TabPanel value="4">
-                            <Card sx={{ maxWidth: 645 }}>
+                            <Card sx={{ maxWidth: 645, minWidth: 250,}}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
@@ -157,7 +159,7 @@ function Portfolio() {
                         </TabPanel>
 
                         <TabPanel value="5">
-                            <Card sx={{ maxWidth: 645 }}>
+                            <Card sx={{ maxWidth: 645, minWidth: 250, }}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
