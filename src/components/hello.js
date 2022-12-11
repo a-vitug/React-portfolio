@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
-import { Parallax } from 'react-scroll-parallax';
 
 function Hello() {
 
@@ -40,20 +39,12 @@ function Hello() {
         }
     }
 
-    // const [value, setValue] = React.useState('1');
-
-    // const handleChange = (event, newValue) => {
-    //   setValue(newValue);
-    // };
-
     return (
         <>
             <Box className='greet' height='85vh' p={30} display='flex' justifyContent='center' textAlign='center' >
-                <Parallax speed={-15}>
-                    <div className='hello'>
-                        <span>  {texts} </span>
-                    </div>
-                </Parallax>
+                <div className='hello'>
+                    <span> {texts} </span>
+                </div>
             </Box>
         
         </>

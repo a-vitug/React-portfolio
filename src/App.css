@@ -256,12 +256,22 @@
         height: 40vh;
     } 
     .hello {
-        font-size: 50px;
+        font-size: 37px;
+    }
+    .aboutmebox {
+        font-size: medium;
+        padding: 0;
     }
 
     img {
         position: relative;
         display: flex;
         align-self: start;
+    }
+
+    .divide,
+    .logo-text {
+        display: flex;
+        font-size: large;
     }
 }

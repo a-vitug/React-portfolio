@@ -9,7 +9,7 @@ import { Container } from '@mui/system';
 function Header() {
     return(
         <Container maxWidth='xl'>
-            <Stack direction='row' alignItems='center' justifyContent='space-between' spacing='100px'>
+            <Stack direction='row' alignItems='center' justifyContent='space-between' >
                 
                 <Box>
                     <a className='logo-text' href='https://docs.google.com/document/d/1mNsgcla0Cmxl1ABEm0kjDgDtyCe5XtaQv4pLdJw5Gtk/edit?usp=sharing'> &lt; a-vitug /&gt; </a>

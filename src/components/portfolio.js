@@ -39,7 +39,12 @@ function Portfolio() {
         &:hover {
             border: 3px solid #F7F4EC;
             border-radius: 20px;
-          }
+        }
+
+        @media screen and (max-width: 390px) {
+            font-size: medium;
+            padding: 5px 10px;
+        }
     `;
 
     useEffect(() => {
