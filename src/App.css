@@ -64,7 +64,7 @@
     overflow: visible;
     text-align: center;
     height: 40px;
-    width: 60%;
+    width: 100%;
 }
 
 .aboutmetitle:after {
@@ -99,7 +99,7 @@
     overflow: visible;
     text-align: center;
     height: 40px;
-    width: 60%;
+    width: 100%;
     float: right;
 }
 

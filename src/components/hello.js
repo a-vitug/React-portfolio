@@ -41,7 +41,7 @@ function Hello() {
 
     return (
         <>
-            <Box className='greet' height='85vh' p={30} display='flex' justifyContent='center' textAlign='center' >
+            <Box className='greet' height='85vh' width='85vw' display='flex' justifyContent='center' alignItems='center' >
                 <div className='hello'>
                     <span> {texts} </span>
                 </div>

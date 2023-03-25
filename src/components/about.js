@@ -24,7 +24,7 @@ function About () {
                 <Grid item xs={3} md={5} lg={5} display='flex' justifyContent='center'>
                     <img src={Me}  float='right' height='60%' width='60%'
                         data-aos="fade-up" 
-                        data-aos-duration="8000"
+                        data-aos-duration="7000"
                         data-aos-offset="350"
                         data-aos-anchor-placement="center-bottom"
                     />
@@ -34,11 +34,12 @@ function About () {
                     <Box fontSize={21}>
                         <Parallax speed={10}>
                             <Box p={6} className='aboutmebox' id='aboutme'>
-                                <p data-aos="fade-right"> My name is Allyson Vitug. I am a <span data-aos="zoom-in"> &lt; Full Stack Developer /&gt; </span> from Anaheim, CA. <br></br> </p>
-                                    {/* A first generational woman of color breaking into tech with passion for creating and designing webpages... */}
-                                <p data-aos="fade-left"> Started the road of breaking into the tech industry when it was introduced to me by people around me also getting into tech. </p>
-                                <p data-aos="fade-right"> I graduated a Full Stack Coding Bootcamp at UCI (University of California, Irvine) and have been using other forms of educational sources
-                                    to further my knowledge. </p>
+                                <p data-aos="fade-left"> Welcome to my portfolio! </p>
+                                <p data-aos="fade-right"> My name is Allyson Vitug, a Full Stack Developer from Anaheim, CA. <br></br> </p>
+                                {/* A first generational woman of color breaking into tech with passion for creating and designing webpages... */}
+                                <p data-aos="fade-left"> I graduated a Full Stack Coding Bootcamp at UCI (University of California, Irvine) and currently majoring a Computer Science degree at Cypress College
+                                    to further enhance my knowledge. </p>
+                                {/* <p data-aos="fade-right"> Started the road of breaking into the tech industry amidst a global pandemic... </p> */}
                             </Box>
                         </Parallax>
 
